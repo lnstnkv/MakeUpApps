@@ -11,6 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:fontFamily="@font/opensans_bold"
         android:theme="@style/Theme.MakeUpApps">
         <activity
             android:name=".RegisterActivity"
