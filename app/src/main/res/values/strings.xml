@@ -3,4 +3,9 @@
     <string name="cute_make">Cute Makeup</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="select_photo">Select photo</string>
+    <string name="password_twice">Confirm Password</string>
 </resources>
