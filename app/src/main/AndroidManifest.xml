@@ -15,7 +15,7 @@
         android:fontFamily="@font/opensans_bold"
         android:theme="@style/Theme.MakeUpApps">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".registration.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".launcher.SplashActivity"
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".start.MainActivity"
             android:exported="true"></activity>
     </application>
 
