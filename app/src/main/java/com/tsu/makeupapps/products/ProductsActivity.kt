@@ -12,12 +12,7 @@ class ProductsActivity : AppCompatActivity() {
     private val viewbinding by lazy { ActivityProductsBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_products)
-        /*if(savedInstanceState==null){
-            selectScreen(ProductsFragment.TAG, ProductsFragment.newInstance())
-        }
-
-         */
+        setContentView(viewbinding.root)
         viewbinding.bottomNavigation.setOnItemSelectedListener {
             revealFragment(it.itemId)
         }
@@ -26,8 +21,12 @@ class ProductsActivity : AppCompatActivity() {
 
         when(itemId){
 
-            R.id.navigation_profile -> {
+            R.id.navigation_settings -> {
                 selectScreen(SettingsFragment.TAG, SettingsFragment.newInstance())
+                return true
+            }
+            R.id.navigation_products -> {
+                selectScreen(ProductsFragment.TAG, ProductsFragment.newInstance())
                 return true
             }
             else -> return false
