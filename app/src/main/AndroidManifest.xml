@@ -11,6 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:fontFamily="@font/opensans_bold"
         android:theme="@style/Theme.MakeUpApps">
         <activity
             android:name=".products.ProductsActivity"
@@ -28,11 +30,15 @@
             android:name=".launcher.SplashActivity"
             android:exported="true"
             android:theme="@style/Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
     </application>
 
 </manifest>
