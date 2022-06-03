@@ -16,5 +16,13 @@
     <string name="save">Save</string>
     <string name="error_email">Check the entered email</string>
     <string name="error_pwd">Passwords do not match</string>
+    <string name="nyx">Nyx</string>
+    <string name="dior">Dior</string>
+    <string name="pure">Pure Anada</string>
+    <string name="clinique">Clinique</string>
+    <string name="loreal">Loreal</string>
+    <string name="coverfirl">Covergirl</string>
+
+
     <string name="error_pwd_len">password must be at least 8 characters</string>
 </resources>

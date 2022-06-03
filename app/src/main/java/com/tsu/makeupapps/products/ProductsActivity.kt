@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.tsu.makeupapps.R
 import com.tsu.makeupapps.databinding.ActivityProductsBinding
+import com.tsu.makeupapps.products.brand.BrandFragment
 import com.tsu.makeupapps.settings.SettingsFragment
 
 class ProductsActivity : AppCompatActivity() {
@@ -13,8 +14,12 @@ class ProductsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(viewbinding.root)
+        if(savedInstanceState==null){
+            selectScreen(ProductsFragment.TAG, ProductsFragment.newInstance())
+        }
         viewbinding.bottomNavigation.setOnItemSelectedListener {
             revealFragment(it.itemId)
+
         }
     }
     private fun revealFragment(itemId :Int):Boolean{
@@ -27,6 +32,10 @@ class ProductsActivity : AppCompatActivity() {
             }
             R.id.navigation_products -> {
                 selectScreen(ProductsFragment.TAG, ProductsFragment.newInstance())
+                return true
+            }
+            R.id.navigation_brand -> {
+                selectScreen(BrandFragment.TAG, BrandFragment.newInstance())
                 return true
             }
             else -> return false
