@@ -13,6 +13,9 @@ class ProductsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(viewbinding.root)
+        if(savedInstanceState==null){
+            selectScreen(ProductsFragment.TAG, ProductsFragment.newInstance())
+        }
         viewbinding.bottomNavigation.setOnItemSelectedListener {
             revealFragment(it.itemId)
         }

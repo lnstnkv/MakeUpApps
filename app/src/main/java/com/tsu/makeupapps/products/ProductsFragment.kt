@@ -1,14 +1,14 @@
 package com.tsu.makeupapps.products
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tsu.makeupapps.R
 import com.tsu.makeupapps.databinding.FragmentProductsBinding
-import com.tsu.makeupapps.databinding.FragmentSettngsBinding
-import com.tsu.makeupapps.settings.SettingsFragment
 
-class ProductsFragment:Fragment(R.layout.activity_products){
+class ProductsFragment:Fragment(R.layout.fragment_products){
     companion object {
         val TAG = ProductsFragment::class.java.simpleName
         fun newInstance() = ProductsFragment()
@@ -17,6 +17,35 @@ class ProductsFragment:Fragment(R.layout.activity_products){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewbinding = FragmentProductsBinding.bind(view)
+        initRecyclerView()
+    }
+    private val productAdapterListener = object : ProductAdapter.ProductAdapterListener {
+        override fun onItemClick(item: Product) {
+            Log.d("userID",item.id)
+        }
+    }
+    private val productAdapter = ProductAdapter(productAdapterListener)
+
+    private fun initRecyclerView() = with(viewbinding){
+
+
+        productRecycler.layoutManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        productRecycler.apply {
+            adapter = productAdapter
+            addItemDecoration(ProductItemDecoration())
+        }
+
+        val productItems = mutableListOf<Product>()
+        productItems.add(Product("1", "Blush", R.drawable.blush))
+        productItems.add(Product("2", "Bronzer", R.drawable.bronzer))
+        productItems.add(Product("3", "Eyebrow", R.drawable.eyebrow))
+        productItems.add(Product("4", "Eyeliner", R.drawable.eyeliner))
+        productItems.add(Product("5", "Eyeshadow", R.drawable.eyeshadow))
+        productItems.add(Product("6", "Foundation", R.drawable.foundation))
+        productItems.add(Product("7", "Lip Liner", R.drawable.lipliner))
+        productItems.add(Product("8", "Lipstick", R.drawable.liostick))
+        productAdapter.submitList(productItems)
     }
 
 }

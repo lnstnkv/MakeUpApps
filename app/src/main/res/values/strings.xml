@@ -14,6 +14,15 @@
     <string name="brands">Brands</string>
     <string name="products">Products</string>
     <string name="save">Save</string>
+    <string name="blush">Blush</string>
+    <string name="bronzer">Bronzer</string>
+    <string name="eyebrow">Eyebrow</string>
+    <string name="eyeliner">Eyeliner</string>
+    <string name="eyeshadow">Eyeshadow</string>
+    <string name="foundation">Foundation</string>
+    <string name="lip_liner">Lip Liner</string>
+    <string name="lipstick">Lipstick</string>
+
     <string name="error_email">Check the entered email</string>
     <string name="error_pwd">Passwords do not match</string>
     <string name="error_pwd_len">password must be at least 8 characters</string>
