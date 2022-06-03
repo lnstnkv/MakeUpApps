@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        controller.getByBrand(brand = "Dior", onSuccess = {
+       /* controller.getByBrand(brand = "Dior", onSuccess = {
             Toast.makeText(this@MainActivity, "Не ошибка чата", Toast.LENGTH_LONG).show()
         },
             onFailure = {
@@ -22,6 +22,16 @@ class MainActivity : AppCompatActivity() {
         },
             onFailure = {
                 Toast.makeText(this@MainActivity, "Ошибка type", Toast.LENGTH_LONG).show()
+            })
+
+        */
+
+        controller.getAll(
+            onSuccess = {
+            Toast.makeText(this@MainActivity, "Не ошибка", Toast.LENGTH_LONG).show()
+        },
+            onFailure = {
+                Toast.makeText(this@MainActivity, "Ошибка", Toast.LENGTH_LONG).show()
             })
     }
 }

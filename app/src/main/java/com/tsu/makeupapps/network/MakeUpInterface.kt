@@ -12,6 +12,9 @@ interface MakeUpInterface {
     @GET("./v1/products.json?product_type=")
     fun getMakeUpByProductType(@Query("product_type")product_type:String): Call<List<ProductsResponses>>
 
+    @GET("./v1/products.json")
+    fun getMakeUp(): Call<List<ProductsResponses>>
+
     @GET("./v1/products/{id}")
     fun getMakeUpById(@Path("id") id: String): Call<List<ProductsResponses>>
 }
