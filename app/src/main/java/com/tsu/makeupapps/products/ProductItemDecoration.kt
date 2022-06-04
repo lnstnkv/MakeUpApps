@@ -26,10 +26,8 @@ class ProductItemDecoration : RecyclerView.ItemDecoration() {
         val newRect = when (position) {
             0 -> Rect(margin16, margin24, margin8, margin12)
             1 -> Rect(margin8, margin24, margin16, margin12)
-            state.itemCount-2-> Rect(margin16, margin12, margin8, margin80)
-            state.itemCount-1-> Rect(margin8, margin12, margin16, margin80)
-
-            else -> {
+            else -> Rect(margin16, margin12, margin8, margin12)
+          /*  else -> {
                 if (position % 2 == 0) {
                     Rect(margin16, margin12, margin8, margin12)
                 } else {
@@ -37,6 +35,8 @@ class ProductItemDecoration : RecyclerView.ItemDecoration() {
                     }
                 }
 
+
+           */
 
             }
 

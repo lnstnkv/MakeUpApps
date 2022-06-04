@@ -1,9 +1,13 @@
 package com.tsu.makeupapps.products
 
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tsu.makeupapps.R
 import com.tsu.makeupapps.databinding.FragmentProductsBinding
@@ -21,7 +25,7 @@ class ProductsFragment:Fragment(R.layout.fragment_products){
     }
     private val productAdapterListener = object : ProductAdapter.ProductAdapterListener {
         override fun onItemClick(item: Product) {
-            Log.d("userID",item.id)
+            print(item)
         }
     }
     private val productAdapter = ProductAdapter(productAdapterListener)
@@ -30,10 +34,11 @@ class ProductsFragment:Fragment(R.layout.fragment_products){
 
 
         productRecycler.layoutManager =
-            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+           // LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         productRecycler.apply {
             adapter = productAdapter
-            addItemDecoration(ProductItemDecoration())
+           // addItemDecoration(ProductItemDecoration())
         }
 
         val productItems = mutableListOf<Product>()

@@ -46,12 +46,12 @@ class ProductAdapter (
         }
 
         fun bind(product: Product) = with(binding) {
-            textViewNameProduct.text = product.name
+            textViewNameBrand.text = product.name
                 Glide
-                    .with(imageViewProduct.context)
+                    .with(imageViewLogoBrand.context)
                     .load(product.image)
                     .circleCrop()
-                    .into(imageViewProduct)
+                    .into(imageViewLogoBrand)
 
 
         }
