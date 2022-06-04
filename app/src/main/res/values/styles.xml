@@ -50,4 +50,22 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="Text_product">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:textAppearance">@style/Text_24</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_description">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:textAppearance">@style/Text_Medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_description.Bold">
+        <item name="fontFamily">@font/opensans_bold</item>
+    </style>
+
 </resources>

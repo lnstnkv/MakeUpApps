@@ -25,4 +25,10 @@
 
 
     <string name="error_pwd_len">password must be at least 8 characters</string>
+    <string name="brand">Brand:</string>
+    <string name="price">Price:</string>
+    <string name="rating">Rating:</string>
+    <string name="loading"> Loading…</string>
+    <string name="color">Color</string>
+    <string name="description">Description</string>
 </resources>
