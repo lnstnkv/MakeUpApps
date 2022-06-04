@@ -7,15 +7,15 @@
 
     <application
         android:allowBackup="true"
+        android:fontFamily="@font/opensans_bold"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:screenOrientation="portrait"
-        android:fontFamily="@font/opensans_bold"
+        android:supportsRtl="true"
         android:theme="@style/Theme.MakeUpApps">
         <activity
-            android:name=".products.ProductsActivity"
+            android:name=".CurrentProductActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,12 +24,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".launcher.SplashActivity"
-            android:exported="true"
-            android:theme="@style/Launcher">
+            android:name=".products.ProductsActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,8 +33,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:name=".registration.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".launcher.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Launcher">
+
+        </activity>
+        <activity
+            android:name=".start.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrentProductActivity">
+
+    <ImageView
+        android:id="@+id/imageViewPicture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSmallLogo"
+        app:srcCompat="@drawable/liner" />
+
+    <ImageView
+        android:id="@+id/imageViewSmallLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/small_logo" />
+
+    <TextView
+        android:id="@+id/textViewNameCurrentProduct"
+        style="@style/Text_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/brands"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPicture"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPicture" />
+
+    <TextView
+        android:id="@+id/textViewBrand"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/brand"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPicture"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameCurrentProduct" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/price"
+        app:layout_constraintStart_toStartOf="@+id/textViewBrand"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBrand" />
+
+    <TextView
+        android:id="@+id/textViewRating"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/rating"
+        app:layout_constraintStart_toStartOf="@+id/textViewPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
+
+    <TextView
+        android:id="@+id/textViewBrandValue"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/loading"
+        app:layout_constraintStart_toEndOf="@+id/textViewBrand"
+        app:layout_constraintTop_toTopOf="@+id/textViewBrand" />
+
+    <TextView
+        android:id="@+id/textViewPriceValue"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/loading"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrice"
+        app:layout_constraintTop_toTopOf="@+id/textViewPrice" />
+
+    <TextView
+        android:id="@+id/textViewRatingValue"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/loading"
+        app:layout_constraintStart_toEndOf="@+id/textViewRating"
+        app:layout_constraintTop_toTopOf="@+id/textViewRating" />
+
+    <TextView
+        android:id="@+id/textViewColor"
+        style="@style/Text_description.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPicture" />
+
+    <TextView
+        android:id="@+id/textViewDesc"
+        style="@style/Text_description.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewColor" />
+
+    <ImageView
+        android:id="@+id/imageViewColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewColor"
+        app:srcCompat="@drawable/circle_color" />
+
+    <ImageView
+        android:id="@+id/imageViewColor2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewColor"
+        app:layout_constraintTop_toTopOf="@+id/imageViewColor"
+        app:srcCompat="@drawable/circle_color" />
+
+    <TextView
+        android:id="@+id/textViewValueDesc"
+        style="@style/Text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/loading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDesc" />
+</androidx.constraintlayout.widget.ConstraintLayout>
